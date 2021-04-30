@@ -1,4 +1,4 @@
-// ASK MY ASSISTANT
+// MY ASSISTANT
 'use strict';
 function AlexaSkill(appId) {
     this._appId = appId;
