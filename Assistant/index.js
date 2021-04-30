@@ -1,4 +1,4 @@
-// ASK MY NOTES
+// ASK MY ASSISTANT
 'use strict';
 function AlexaSkill(appId) {
     this._appId = appId;
@@ -113,19 +113,22 @@ Response.prototype = (function () {
 
 var APP_ID = undefined; //replace with "amzn1.echo-sdk-ams.app.[your-unique-value-here]";
 var http = require('http');
+
 var NotesAssistant = function () {
     AlexaSkill.call(this, APP_ID);
 };
 NotesAssistant.prototype = Object.create(AlexaSkill.prototype);
 NotesAssistant.prototype.constructor = NotesAssistant;
+
 var phrase = "";
-var host = 'your IP:55439/';
-var service_name = "?notes";
+var host = 'http://your IP:55439/';
+var service_name = "?assistant";
 var options = {
     host: 'your IP',
     port: 55439,
-    path: '/?notes=*end*'
+    path: '/?assistant=*end*'
 };
+        
 NotesAssistant.prototype.intentHandlers =
 {
     WordsIntent: function (intent, session, response)
@@ -143,6 +146,7 @@ NotesAssistant.prototype.intentHandlers =
             response.ask("Sorry.");
         }
     },
+    
    "AMAZON.StopIntent": function (intent, session, response) 
    {    
         var req = http.request(options, res => {
@@ -157,6 +161,7 @@ NotesAssistant.prototype.intentHandlers =
         });
         req.end();
    },
+      
    "AMAZON.CancelIntent": function (intent, session, response) 
    { 
         var req = http.request(options, res => {
@@ -172,6 +177,7 @@ NotesAssistant.prototype.intentHandlers =
         req.end();
    }
 };
+
 function HTTP_Request(response) {
     var msg = service_name + "=" + phrase;
     var endpoint = host + msg;

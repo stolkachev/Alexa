@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "my notes",
+            "invocationName": "my health",
             "intents": [
                 {
                     "name": "AMAZON.CancelIntent",
@@ -13,11 +13,7 @@
                 },
                 {
                     "name": "AMAZON.StopIntent",
-                    "samples": [
-                        "ok",
-                        "goodbye",
-                        "stop"
-                    ]
+                    "samples": []
                 },
                 {
                     "name": "AMAZON.NavigateHomeIntent",
