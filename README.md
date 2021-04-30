@@ -1,6 +1,6 @@
 ## Alexa connectors to InterActor
 ### Step by step installation:
-#### http://nnod.com/alexa_2_siri.pdf
+#### http://256gl.com/alexa_2_siri.pdf
 ###
 ### InterActor with Siri interface:
 #### https://itunes.apple.com/ca/app/interactor/id1310219187
