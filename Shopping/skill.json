@@ -1,0 +1,42 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my notes",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "ok",
+                        "goodbye",
+                        "stop"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "WordsIntent",
+                    "slots": [
+                        {
+                            "name": "Phrase",
+                            "type": "AMAZON.Person"
+                        }
+                    ],
+                    "samples": [
+                        "{Phrase}"
+                    ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
